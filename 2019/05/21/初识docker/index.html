@@ -6,13 +6,15 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>andyoun&#39; blog</title>
+  <title>初识docker | andyoun&#39; blog</title>
   <meta name="author" content="andyoun">
+  
+  <meta name="description" content="什么是DockerDocker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司 内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="初识docker">
   <meta property="og:site_name" content="andyoun&#39; blog">
 
   
@@ -111,51 +113,29 @@ var _hmt = _hmt || [];
 
   <div class="container">
   	<div class="content">
-    	 <div class="page-header logo">
-  <h1>andyoun&#39; blog<span class="blink-fast">∎</span></h1>
-</div>
+    	 
 
-<div class="row page">
 
 	
+		<div class="page-header">
+			<h1> 初识docker</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
 	<div class="col-md-9">
 	
 
-		<div class="slogan">
+	<!-- content -->
+	<div class="mypage">		
+	  		
 
-
-		<i class="fa fa-heart blink-slow"></i>
-
-		Keep and carry on.
-
-</div>    
-
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2019/05/21/初识docker/">初识docker</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2019-05-21  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h1><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司 内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项 目后来还加入了 Linux 基金会，并成立推动开放容器联盟。<br>Docker 自开源后受到广泛的关注和讨论，至今其 GitHub 项目已经超过 3 万 6 千个 星标和一万多个 fork。甚至由于 Docker 项目的火爆，在 2013 年底，dotCloud 公 司决定改名为 Docker。Docker 最初是在 Ubuntu 12.04 上开发实现的;Red Hat 则 从 RHEL 6.5 开始对 Docker 进行支持;Google 也在其 PaaS 产品中广泛应用 Docker。<br>Docker 使用 Google 公司推出的 Go 语言 进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离， 属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进 程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 LXC，转而使 用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC 和 containerd。<br>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔 离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻 便、快捷。<br>下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟 出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程; 而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有 进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
+	  <h1 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h1><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司 内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项 目后来还加入了 Linux 基金会，并成立推动开放容器联盟。<br>Docker 自开源后受到广泛的关注和讨论，至今其 GitHub 项目已经超过 3 万 6 千个 星标和一万多个 fork。甚至由于 Docker 项目的火爆，在 2013 年底，dotCloud 公 司决定改名为 Docker。Docker 最初是在 Ubuntu 12.04 上开发实现的;Red Hat 则 从 RHEL 6.5 开始对 Docker 进行支持;Google 也在其 PaaS 产品中广泛应用 Docker。<br>Docker 使用 Google 公司推出的 Go 语言 进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离， 属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进 程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 LXC，转而使 用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC 和 containerd。<br>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔 离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻 便、快捷。<br>下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟 出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程; 而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有 进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
 <h1 id="为什么要使用-Docker"><a href="#为什么要使用-Docker" class="headerlink" title="为什么要使用 Docker?"></a>为什么要使用 Docker?</h1><blockquote>
 <p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p>
 </blockquote>
@@ -196,91 +176,72 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-
-	
-	</div>
-  <a type="button" href="/2019/05/21/初识docker/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
-
-   
-</div>
-
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control">
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/docker/">docker<span>1</span></a></li>
-		
-		 
-		</ul>
+	  
 	</div>
 
+	<div>
+  	<center>
+	<div class="pagination">
 
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
     
-      <li>
-        <a href="/2019/05/21/初识docker/"><i class="fa fa-file-o"></i>初识docker</a>
-      </li>
-    
-  </ul>
 </div>
 
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/AndyYoungCN" title="My Github account." target="_blank" ]);">My Github</a></li>
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
 	
-	</ul>
-</div>
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-05-21 
+	</div>
+	
 
+	<!-- categories -->
+    
 
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/docker/">docker<span>1</span></a></li>
+    </ul>
+	</div>
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
 
+	<!-- toc -->
+	<div class="meta-widget">
 	
+	</div>
 	
-</div> <!-- row-fluid -->
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
 	</div>
   </div>
   <div class="container-narrow">
