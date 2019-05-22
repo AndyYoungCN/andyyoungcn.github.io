@@ -6,13 +6,24 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>andyoun&#39; blog</title>
+  <title>基本概念 | andyoun&#39; blog</title>
   <meta name="author" content="andyoung">
+  
+  <meta name="description" content="基本概念
+Docker 包括三个基本概念
+
+镜像(Image)
+容器(Container
+仓库(Reposi
+
+理解了这三个概念，就理解了 Docker 的整个生命周期。
+
+Docker 镜像我们都知道，操作系统分为内核和用户空间。对于 Linux 而言，内核启动后，会挂 载 文件系统为其提供用户空">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="基本概念">
   <meta property="og:site_name" content="andyoun&#39; blog">
 
   
@@ -111,79 +122,29 @@ var _hmt = _hmt || [];
 
   <div class="container">
   	<div class="content">
-    	 <div class="page-header logo">
-  <h1>andyoun&#39; blog<span class="blink-fast">∎</span></h1>
-</div>
+    	 
 
-<div class="row page">
 
 	
+		<div class="page-header">
+			<h1> 基本概念</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
 	<div class="col-md-9">
 	
 
-		<div class="slogan">
+	<!-- content -->
+	<div class="mypage">		
+	  		
 
-
-		<i class="fa fa-heart blink-slow"></i>
-
-		Keep and carry on.
-
-</div>    
-
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2019/05/21/安装-Docker/">安装 Docker</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2019-05-21  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h2><p><a href="https://docs.docker.com/install/linux/docker-ce/centos/" target="_blank" rel="noopener">docker 官网</a></p>
-
-	
-	</div>
-  <a type="button" href="/2019/05/21/安装-Docker/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2019/05/21/基本概念/">基本概念</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2019-05-21  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><blockquote>
+	  <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><blockquote>
 <p>Docker 包括三个基本概念</p>
 <ul>
 <li>镜像(Image)</li>
@@ -199,167 +160,82 @@ var _hmt = _hmt || [];
 <h3 id="Docker-Registry-公开服务"><a href="#Docker-Registry-公开服务" class="headerlink" title="Docker Registry 公开服务"></a>Docker Registry 公开服务</h3><p>Docker Registry 公开服务是开放给用户使用、允许用户管理镜像的 Registry 服 务。一般这类公开服务允许用户免费上传、下载公开的镜像，并可能提供收费服务 供用户管理私有镜像。<br>最常使用的 Registry 公开服务是官方的 Docker Hub，这也是默认的 Registry，并 拥有大量的高质量的官方镜像。除此以外，还有 CoreOS 的 Quay.io，CoreOS 相 关的镜像存储在这里;Google 的 Google Container Registry，Kubernetes 的镜像 使用的就是这个服务。<br>由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针 对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见 的有 阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。在后 面的章节中会有进一步如何配置加速器的讲解。</p>
 <p>国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如 时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。</p>
 <h3 id="私有-Docker-Registry"><a href="#私有-Docker-Registry" class="headerlink" title="私有 Docker Registry"></a>私有 Docker Registry</h3><p>除了使用公开服务外，用户还可以在本地搭建私有 Docker Registry。Docker 官方 提供了 Docker Registry 镜像，可以直接使用做为私有 Registry 服务。在后续的相 关章节中，会有进一步的搭建私有 Registry 服务的讲解。<br>开源的 Docker Registry 镜像只提供了 Docker Registry API 的服务端实现，足以支 持 docker 命令，不影响使用。但不包含图形界面，以及镜像维护、用户管理、 访问控制等高级功能。在官方的商业化版本 Docker Trusted Registry 中，提供了这 些高级功能。<br>除了官方的 Docker Registry 外，还有第三方软件实现了 Docker Registry API，甚 至提供了用户界面以及一些高级功能。比如，VMWare Harbor 和 Sonatype Nexus。</p>
-
-	
-	</div>
-  <a type="button" href="/2019/05/21/基本概念/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2019/05/21/初识docker/">初识docker</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2019-05-21  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h1><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司 内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项 目后来还加入了 Linux 基金会，并成立推动开放容器联盟。<br>Docker 自开源后受到广泛的关注和讨论，至今其 GitHub 项目已经超过 3 万 6 千个 星标和一万多个 fork。甚至由于 Docker 项目的火爆，在 2013 年底，dotCloud 公 司决定改名为 Docker。Docker 最初是在 Ubuntu 12.04 上开发实现的;Red Hat 则 从 RHEL 6.5 开始对 Docker 进行支持;Google 也在其 PaaS 产品中广泛应用 Docker。<br>Docker 使用 Google 公司推出的 Go 语言 进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离， 属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进 程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 LXC，转而使 用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC 和 containerd。<br>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔 离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻 便、快捷。<br>下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟 出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程; 而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有 进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
-<h1 id="为什么要使用-Docker"><a href="#为什么要使用-Docker" class="headerlink" title="为什么要使用 Docker?"></a>为什么要使用 Docker?</h1><blockquote>
-<p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p>
-</blockquote>
-<h2 id="更高效的利用系统资源"><a href="#更高效的利用系统资源" class="headerlink" title="更高效的利用系统资源"></a>更高效的利用系统资源</h2><p>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统 资源的利用率更高。无论是应用执行速度、内存损耗或者文件存储速度，都要比传 统虚拟机技术更高效。因此，相比虚拟机技术，一个相同配置的主机，往往可以运 行更多数量的应用。</p>
-<h2 id="更快速的启动时间"><a href="#更快速的启动时间" class="headerlink" title="更快速的启动时间"></a>更快速的启动时间</h2><p>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接 运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启 动时间。大大的节约了开发、测试、部署的时间。</p>
-<h2 id="一致的运行环境"><a href="#一致的运行环境" class="headerlink" title="一致的运行环境"></a>一致的运行环境</h2><p>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环 境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内 核外完整的运行时环境，确保了应用运行环境一致性，从而不会再出现 “这段代码 在我机器上没问题啊” 这类问题。</p>
-<h2 id="持续交付和部署"><a href="#持续交付和部署" class="headerlink" title="持续交付和部署"></a>持续交付和部署</h2><p>对开发和运维(DevOps)人员来说，最希望的就是一次创建或配置，可以在任意 地方正常运行。<br>使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员 可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系 统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合 持续部署(Continuous Delivery/Deployment) 系统进行自动部署。而且使用 Dockerfile 使镜像构建透明化，不仅仅开发团队可以理解应用运行环 境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。</p>
-<h2 id="更轻松的迁移"><a href="#更轻松的迁移" class="headerlink" title="更轻松的迁移"></a>更轻松的迁移</h2><p>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在 很多平台上运行，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运 行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一 个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</p>
-<h2 id="更轻松的维护和扩展"><a href="#更轻松的维护和扩展" class="headerlink" title="更轻松的维护和扩展"></a>更轻松的维护和扩展</h2><p>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也 使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此 外，Docker 团队同各个开源项目团队一起维护了一大批高质量的官方镜像，既可 以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜 像制作成本。</p>
-<h2 id="对比传统虚拟机总结"><a href="#对比传统虚拟机总结" class="headerlink" title="对比传统虚拟机总结"></a>对比传统虚拟机总结</h2><table>
-<thead>
-<tr>
-<th>特性</th>
-<th style="text-align:center">容器</th>
-<th style="text-align:right">虚拟机</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>启动</td>
-<td style="text-align:center">秒级</td>
-<td style="text-align:right">分钟级</td>
-</tr>
-<tr>
-<td>硬盘使用</td>
-<td style="text-align:center">一般为 MB</td>
-<td style="text-align:right">一般为 GB</td>
-</tr>
-<tr>
-<td>性能</td>
-<td style="text-align:center">接近原生</td>
-<td style="text-align:right">弱于</td>
-</tr>
-<tr>
-<td>系统支持量</td>
-<td style="text-align:center">单机支持上千个容器</td>
-<td style="text-align:right">一般几十个</td>
-</tr>
-</tbody>
-</table>
-
-	
-	</div>
-  <a type="button" href="/2019/05/21/初识docker/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
-
-   
-</div>
-
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control">
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/docker/">docker<span>3</span></a></li>
-		
-		 
-		</ul>
+	  
 	</div>
 
+	<div>
+  	<center>
+	<div class="pagination">
 
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
     
-      <li>
-        <a href="/2019/05/21/安装-Docker/"><i class="fa fa-file-o"></i>安装 Docker</a>
-      </li>
     
-      <li>
-        <a href="/2019/05/21/基本概念/"><i class="fa fa-file-o"></i>基本概念</a>
-      </li>
+    <a href="/2019/05/21/安装-Docker/" type="button" class="btn btn-default"><i class="fa fa-arrow-circle-o-left"></i> Prev</a>
     
-      <li>
-        <a href="/2019/05/21/初识docker/"><i class="fa fa-file-o"></i>初识docker</a>
-      </li>
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-  </ul>
+    <a href="/2019/05/21/初识docker/" type="button" class="btn btn-default ">Next<i class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
 </div>
 
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/AndyYoungCN" title="My Github account." target="_blank" ]);">My Github</a></li>
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
 	
-	</ul>
-</div>
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-05-21 
+	</div>
+	
 
+	<!-- categories -->
+    
 
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/docker/">docker<span>3</span></a></li>
+    </ul>
+	</div>
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
 
+	<!-- toc -->
+	<div class="meta-widget">
 	
+	</div>
 	
-</div> <!-- row-fluid -->
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
 	</div>
   </div>
   <div class="container-narrow">
